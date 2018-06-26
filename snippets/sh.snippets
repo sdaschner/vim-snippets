@@ -1,22 +1,29 @@
 # Shebang
 snippet #!
-	#!/bin/sh
+	#!/bin/bash
 
 snippet s#!
-	#!/bin/sh
-	set -eu
+	#!/bin/bash
+	set -euo pipefail
 
 snippet safe
 	set -eu
 
 snippet bash
-	#!/usr/bin/env bash
+	#!/bin/bash
 
 snippet sbash
-	#!/usr/bin/env bash
+	#!/bin/bash
 	set -euo pipefail
 	IFS=$'\n\t'
 
+snippet cd0
+	cd ${0%/*}
+
+snippet usage
+	if [[ "\$1" == "" ]]; then
+		echo "Usage: ${0##*/} ${0:...}"; exit 2
+	fi
 snippet if
 	if [ $1 ]; then
 		${0:${VISUAL}}
