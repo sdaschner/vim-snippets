@@ -1,0 +1,76 @@
+# snippets for asciidoc
+
+snippet - "----" w
+${0:${VISUAL}}----
+----
+endsnippet
+
+snippet -java "[source,java]----" w
+[source,java]
+${0:${VISUAL}}----
+----
+endsnippet
+
+snippet -xml "[source,xml]----" w
+[source,xml]
+${0:${VISUAL}}----
+----
+endsnippet
+
+snippet -json "[source,json]----" w
+[source,json]
+${0:${VISUAL}}----
+----
+endsnippet
+
+snippet -yaml "[source,yaml]----" w
+[source,yaml]
+${0:${VISUAL}}----
+----
+endsnippet
+
+snippet -dock "[source,Dockerfile]----" w
+[source,Dockerfile]
+${0:${VISUAL}}----
+----
+endsnippet
+
+snippet + "++++" w
+${0:${VISUAL}}++++
+++++
+endsnippet
+
+snippet img "image::${0:target}[]" w
+image::${0:target}[]
+endsnippet
+
+snippet nbsp "{nbsp}" w
+{nbsp}
+endsnippet
+
+snippet newslink "Newsletter link" w
+- ${1:https://...}["${2:name}", window="_blank", role="no_highlight"]
+endsnippet
+
+snippet list "HTML link list" w
+++++
+<ul>
+<li><a class="no_highlight" href="${1}" target="_blank">${2}</a></li>
+</ul>
+++++
+endsnippet
+
+snippet youtube "Blog YouTube link" w
+++++
+<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+<div class='embed-container'><iframe src='https://www.youtube.com/embed/${0:${VISUAL}}' frameborder='0' allowfullscreen></iframe></div>
+++++
+endsnippet
+
+snippet & "&amp;" w
+&amp;
+endsnippet
+
+snippet -- "&mdash;" w
+&mdash;
+endsnippet

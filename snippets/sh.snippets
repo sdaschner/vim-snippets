@@ -20,6 +20,13 @@ snippet sbash
 snippet cd0
 	cd ${0%/*}
 
+snippet trap
+	trap cleanup EXIT
+
+	function cleanup() {
+	  ${0:${VISUAL}}
+	}
+
 snippet usage
 	if [[ "\$1" == "" ]]; then
 		echo "Usage: ${0##*/} ${0:...}"; exit 2

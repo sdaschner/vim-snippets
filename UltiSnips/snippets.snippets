@@ -2,10 +2,11 @@ priority -50
 
 # We use a little hack so that the snippet is expanded
 # and parsed correctly
-snippet usnip "Ultisnips snippet definition" b
-`!p snip.rv = "snippet"` ${1:Tab_trigger} "${2:Description}" ${3:b}
-${0:${VISUAL}}
+snippet snip "Ultisnips snippet definition" b
+`!p snip.rv = "snippet"` ${1:Tab_trigger} "${2:${VISUAL:Description}}" ${3:w}
+`!p snip.rv = t[2]`
 `!p snip.rv = "endsnippet"`
+$0
 endsnippet
 
 snippet global "Global snippet" b
